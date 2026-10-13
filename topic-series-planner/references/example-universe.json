@@ -1,0 +1,153 @@
+{
+  "topic": "宇宙科普",
+  "series": [
+    {
+      "name": "火星探索",
+      "position": "人类下一个家园，也是最大的谜团",
+      "episodes": [
+        {"title": "火星上的一天比地球多40分钟，藏着什么秘密", "angle": "时间", "hook": "反常识", "minutes": 5},
+        {"title": "人类为什么拼命想去火星？答案让人后背发凉", "angle": "动机", "hook": "疑问", "minutes": 6},
+        {"title": "火星曾经也有海洋，后来它经历了什么", "angle": "地质历史", "hook": "认知反转", "minutes": 7},
+        {"title": "火星的大气为什么这么稀薄", "angle": "大气", "hook": "疑问", "minutes": 5},
+        {"title": "登陆火星后，第一个致命威胁可能不是缺氧", "angle": "登陆危险", "hook": "反常识", "minutes": 6},
+        {"title": "火星沙尘暴能吞掉整个地球吗", "angle": "气候灾害", "hook": "恐惧", "minutes": 5},
+        {"title": "火星为什么是红色的？真相不是铁锈那么简单", "angle": "颜色成因", "hook": "反常识", "minutes": 4},
+        {"title": "在火星上活过一天，你要面对哪些绝境", "angle": "生存挑战", "hook": "场景代入", "minutes": 8},
+        {"title": "火星表面的神秘结构，至今无法解释", "angle": "未解之谜", "hook": "悬念", "minutes": 6},
+        {"title": "移民火星是骗局还是希望，算完账我沉默了", "angle": "移民价值", "hook": "冲突", "minutes": 9},
+        {"title": "火星那两颗小卫星，可能来历不凡", "angle": "卫星", "hook": "冷知识", "minutes": 4},
+        {"title": "人类真正踏上火星，还要等多久", "angle": "时间表", "hook": "疑问", "minutes": 6}
+      ]
+    },
+    {
+      "name": "黑洞之谜",
+      "position": "宇宙最极端的天体，物理的边界",
+      "episodes": [
+        {"title": "掉进黑洞会发生什么，答案太诡异", "angle": "体验", "hook": "疑问", "minutes": 6},
+        {"title": "黑洞根本不是洞，那它究竟是什么", "angle": "本质", "hook": "认知反转", "minutes": 5},
+        {"title": "霍金说黑洞会蒸发，这是真的吗", "angle": "霍金辐射", "hook": "疑问", "minutes": 7},
+        {"title": "人类拍到的第一张黑洞照片，藏着什么", "angle": "观测证据", "hook": "悬念", "minutes": 6},
+        {"title": "黑洞会不会最终吞噬整个宇宙", "angle": "宇宙命运", "hook": "恐惧", "minutes": 6},
+        {"title": "时间在黑洞里变慢，能慢到什么地步", "angle": "时间效应", "hook": "疑问", "minutes": 7},
+        {"title": "最小的黑洞，可能只有一个原子大", "angle": "尺寸极限", "hook": "反常识", "minutes": 5},
+        {"title": "银河系正中心，藏着一个超大质量黑洞", "angle": "星系中心", "hook": "冷知识", "minutes": 5},
+        {"title": "黑洞和白洞，宇宙最极端的两个存在", "angle": "对比", "hook": "对比", "minutes": 6},
+        {"title": "黑洞内部是什么，我们可能永远不知道", "angle": "内部结构", "hook": "悬念", "minutes": 6},
+        {"title": "恒星级黑洞，是怎么被恒星造出来的", "angle": "形成机制", "hook": "疑问", "minutes": 6},
+        {"title": "两个黑洞相撞，会发出宇宙最强的声音", "angle": "引力波", "hook": "冷知识", "minutes": 7}
+      ]
+    },
+    {
+      "name": "太阳系行星",
+      "position": "我们最近的邻居，各有各的怪",
+      "episodes": [
+        {"title": "金星和地球是双胞胎，为什么一个是地狱", "angle": "金星", "hook": "对比", "minutes": 6},
+        {"title": "水星离太阳最近，为什么反而不是最热", "angle": "水星", "hook": "反常识", "minutes": 5},
+        {"title": "木星是气态行星，那它的表面在哪", "angle": "木星", "hook": "疑问", "minutes": 5},
+        {"title": "土星环到底有多薄，它是什么做的", "angle": "土星", "hook": "疑问", "minutes": 5},
+        {"title": "天王星为什么躺着转，它经历了什么", "angle": "天王星", "hook": "悬念", "minutes": 6},
+        {"title": "海王星风速超过2000公里，为什么这么猛", "angle": "海王星", "hook": "数字", "minutes": 5},
+        {"title": "冥王星被踢出九大行星，它到底冤不冤", "angle": "冥王星", "hook": "冲突", "minutes": 6},
+        {"title": "月球正在慢慢远离地球，后果有多严重", "angle": "月球", "hook": "恐惧", "minutes": 5},
+        {"title": "太阳系最危险的星球，其实不是火星", "angle": "最危险天体", "hook": "反常识", "minutes": 5},
+        {"title": "土卫六上有湖泊，可装的全是液态甲烷", "angle": "土卫六", "hook": "反常识", "minutes": 5},
+        {"title": "木卫二冰层下，可能藏着一片海洋", "angle": "木卫二", "hook": "悬念", "minutes": 6},
+        {"title": "小行星带里，会不会藏着太阳系的秘密", "angle": "小行星带", "hook": "疑问", "minutes": 5}
+      ]
+    },
+    {
+      "name": "宇宙起源",
+      "position": "从大爆炸到终点，终极问题",
+      "episodes": [
+        {"title": "宇宙大爆炸之前，究竟存在过什么", "angle": "大爆炸之前", "hook": "终极疑问", "minutes": 8},
+        {"title": "宇宙到底有多大，答案超出你的想象", "angle": "尺度", "hook": "疑问", "minutes": 6},
+        {"title": "宇宙在加速膨胀，它最终会走向哪里", "angle": "膨胀", "hook": "恐惧", "minutes": 7},
+        {"title": "如果宇宙无限大，为什么夜空是黑的", "angle": "奥伯斯佯谬", "hook": "反常识", "minutes": 5},
+        {"title": "宇宙的尽头在哪里，边界外面又是什么", "angle": "边界", "hook": "终极疑问", "minutes": 7},
+        {"title": "宇宙中已知最大的结构，能有多大", "angle": "最大结构", "hook": "疑问", "minutes": 6},
+        {"title": "我们的宇宙，会不会只是别人的一个原子", "angle": "尺度脑洞", "hook": "脑洞", "minutes": 6},
+        {"title": "科学家是怎么算出宇宙年龄的", "angle": "测龄方法", "hook": "冷知识", "minutes": 6},
+        {"title": "暗物质占了宇宙27%，我们却看不见它", "angle": "暗物质", "hook": "数字", "minutes": 7},
+        {"title": "暗能量正在把宇宙一点点撕开", "angle": "暗能量", "hook": "恐惧", "minutes": 7},
+        {"title": "宇宙会永远存在吗，三种结局都很绝望", "angle": "结局", "hook": "悬念", "minutes": 8},
+        {"title": "宇宙是什么形状，平的还是弯的", "angle": "形状", "hook": "疑问", "minutes": 6}
+      ]
+    },
+    {
+      "name": "外星生命",
+      "position": "费米悖论与人类的孤独",
+      "episodes": [
+        {"title": "宇宙里到底有多少外星文明，答案令人不安", "angle": "文明数量", "hook": "恐惧", "minutes": 7},
+        {"title": "为什么我们始终找不到外星人", "angle": "费米悖论", "hook": "疑问", "minutes": 8},
+        {"title": "如果真的遇到外星人，人类该怎么办", "angle": "接触应对", "hook": "假设", "minutes": 6},
+        {"title": "外星人可能长什么样，科学家的推演", "angle": "形态推演", "hook": "脑洞", "minutes": 6},
+        {"title": "比邻星b上有生命吗，这是最近的希望", "angle": "最近候选", "hook": "疑问", "minutes": 6},
+        {"title": "外星文明也许早就灭绝了", "angle": "灭绝假说", "hook": "悬念", "minutes": 6},
+        {"title": "人类是宇宙中唯一的智慧生命吗", "angle": "唯一性", "hook": "终极疑问", "minutes": 7},
+        {"title": "如果外星人联系地球，谁最先接到消息", "angle": "信号接收", "hook": "假设", "minutes": 5},
+        {"title": "科学家发现的最像外星信号的东西", "angle": "神秘信号", "hook": "悬念", "minutes": 6},
+        {"title": "外星人为什么不来地球，细思极恐", "angle": "为何不来", "hook": "恐惧", "minutes": 6},
+        {"title": "宇宙里可能存在硅基生命吗", "angle": "硅基生命", "hook": "脑洞", "minutes": 6},
+        {"title": "要不要主动联系外星人，霍金曾发出警告", "angle": "METI争议", "hook": "冲突", "minutes": 7}
+      ]
+    },
+    {
+      "name": "恒星的一生",
+      "position": "从诞生到超新星，元素从哪来",
+      "episodes": [
+        {"title": "恒星是怎么诞生的，从一团冷气体说起", "angle": "诞生", "hook": "疑问", "minutes": 6},
+        {"title": "太阳还能燃烧多久，答案让人焦虑", "angle": "太阳寿命", "hook": "恐惧", "minutes": 5},
+        {"title": "恒星死亡有多壮观，超新星爆炸", "angle": "超新星", "hook": "疑问", "minutes": 6},
+        {"title": "中子星一勺重10亿吨，是怎么做到的", "angle": "中子星", "hook": "数字", "minutes": 6},
+        {"title": "宇宙中已知最大的恒星，究竟有多大", "angle": "最大恒星", "hook": "疑问", "minutes": 5},
+        {"title": "白矮星是什么，它就是太阳的未来", "angle": "白矮星", "hook": "冷知识", "minutes": 5},
+        {"title": "双星系统里的两颗星，会互相吞噬吗", "angle": "双星", "hook": "疑问", "minutes": 5},
+        {"title": "恒星的颜色，其实代表它的温度", "angle": "颜色温度", "hook": "冷知识", "minutes": 4},
+        {"title": "夜空中的星星，有多少早已死去", "angle": "死星", "hook": "细思极恐", "minutes": 5},
+        {"title": "比太阳大100倍的恒星，寿命反而更短", "angle": "质量与寿命", "hook": "反常识", "minutes": 6},
+        {"title": "超新星爆炸，会毁灭地球吗", "angle": "超新星威胁", "hook": "恐惧", "minutes": 5},
+        {"title": "每一颗恒星，都是元素的工厂", "angle": "元素合成", "hook": "冷知识", "minutes": 5}
+      ]
+    },
+    {
+      "name": "时间与时空",
+      "position": "相对论、虫洞与平行宇宙",
+      "episodes": [
+        {"title": "时间到底是什么，物理学家也说不清", "angle": "时间本质", "hook": "终极疑问", "minutes": 8},
+        {"title": "时间旅行真能实现吗，爱因斯坦早有答案", "angle": "时间旅行", "hook": "疑问", "minutes": 7},
+        {"title": "如果你能回到过去，会发生什么", "angle": "回到过去", "hook": "假设", "minutes": 6},
+        {"title": "时间在不同地方流速不同，这是真的", "angle": "时间膨胀", "hook": "反常识", "minutes": 6},
+        {"title": "为什么我们只记得过去，记不住未来", "angle": "时间箭头", "hook": "疑问", "minutes": 6},
+        {"title": "光速为什么是宇宙无法突破的速度极限", "angle": "光速极限", "hook": "疑问", "minutes": 7},
+        {"title": "虫洞真的存在吗，时空的隐藏通道", "angle": "虫洞", "hook": "悬念", "minutes": 7},
+        {"title": "平行宇宙理论，你可能存在于无数世界", "angle": "平行宇宙", "hook": "脑洞", "minutes": 7},
+        {"title": "时间会停止吗，宇宙尽头那一刻", "angle": "时间终点", "hook": "恐惧", "minutes": 6},
+        {"title": "四维空间到底是什么样子", "angle": "四维空间", "hook": "脑洞", "minutes": 6},
+        {"title": "如果时间倒着流，宇宙会变成怎样", "angle": "时间倒流", "hook": "假设", "minutes": 6},
+        {"title": "熵增定律，为什么宇宙只会越来越乱", "angle": "熵增", "hook": "冷知识", "minutes": 6},
+        {"title": "爱因斯坦相对论，一句话就能讲明白", "angle": "相对论入门", "hook": "科普", "minutes": 8},
+        {"title": "时间真的存在吗，也许只是大脑的幻觉", "angle": "时间幻觉", "hook": "终极疑问", "minutes": 7}
+      ]
+    },
+    {
+      "name": "深空探索",
+      "position": "人类的眼睛，飞向星辰大海",
+      "episodes": [
+        {"title": "旅行者1号飞了40多年，现在到哪了", "angle": "旅行者1号", "hook": "数字", "minutes": 6},
+        {"title": "人类飞得最远的探测器，带着一张金唱片", "angle": "金唱片", "hook": "冷知识", "minutes": 5},
+        {"title": "詹姆斯·韦伯望远镜，究竟看到了什么", "angle": "韦伯望远镜", "hook": "悬念", "minutes": 7},
+        {"title": "哈勃望远镜拍到的十大震撼画面", "angle": "哈勃", "hook": "数字", "minutes": 6},
+        {"title": "人类当年为什么突然不再登月了", "angle": "停止登月", "hook": "疑问", "minutes": 6},
+        {"title": "国际空间站里的宇航员，一天怎么过", "angle": "空间站日常", "hook": "场景代入", "minutes": 6},
+        {"title": "宇航员如果不慎掉进太空会怎样", "angle": "太空遇险", "hook": "假设", "minutes": 5},
+        {"title": "火星探测器上的人工智能有多强", "angle": "探测器AI", "hook": "疑问", "minutes": 5},
+        {"title": "中国天眼FAST，究竟听到了什么", "angle": "中国天眼", "hook": "悬念", "minutes": 6},
+        {"title": "人类如何在太空里种出蔬菜", "angle": "太空农业", "hook": "冷知识", "minutes": 5},
+        {"title": "太空电梯离我们还有多远", "angle": "太空电梯", "hook": "疑问", "minutes": 6},
+        {"title": "探测器发回的信号，要走多久到地球", "angle": "信号延迟", "hook": "冷知识", "minutes": 5},
+        {"title": "航天员为什么要穿那么厚的宇航服", "angle": "宇航服", "hook": "科普", "minutes": 4},
+        {"title": "人类的下一站，应该去哪里", "angle": "未来方向", "hook": "悬念", "minutes": 7}
+      ]
+    }
+  ]
+}

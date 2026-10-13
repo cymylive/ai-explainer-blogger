@@ -1,0 +1,31 @@
+# 生成产物（视频/音频/渲染/缓存）
+*.mp4
+*.mp3
+*.wav
+*.avi
+*.mov
+template/audio/
+template/renders/
+template/fin_frames/
+template/stills/
+template/build*/
+template/public/assets/*/audio.wav
+template/script/timeline.json
+template/script/timeline.md
+template/分镜表.md
+template/render.done
+template/fin_count.txt
+audio/cache/
+
+# 依赖
+node_modules/
+__pycache__/
+*.pyc
+
+# 输出清单（按需保留可删掉这两行）
+# *.xlsx
+
+# 系统
+.DS_Store
+*.log
+Thumbs.db
