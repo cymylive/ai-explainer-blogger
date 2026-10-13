@@ -1,7 +1,7 @@
 import React from 'react';
 import {useCurrentFrame} from 'remotion';
 import {GlitchIn, kf, emphasisPulse, easeInOutPow, SENTENCES, TOTAL_FRAMES, CHAPTER_STARTS, FONT_HEAVY, FONT_WIDE, FONT_ORB, clamp01, SQUEEZE, fitSize, EM_WIDE} from '../common';
-import {CText, TechText, TechSub, Pill, TopCapsule, ArrowH, PURPLE, PURPLE_TECH, GREY, GREY_MID, WHITE, GLOW_PURPLE_S, PILL_SHADOW, fadeIn, slideUp} from '../ui';
+import {CText, TechText, TechSub, Pill, TopCapsule, ArrowH, PURPLE, PURPLE_LIGHT, PURPLE_TECH, GREY, GREY_MID, WHITE, GLOW_PURPLE_S, PILL_SHADOW, fadeIn, slideUp} from '../ui';
 import {VIDEO} from '../config';
 const clampFrames = (n: number, len: number) => clamp01(n / len);
 
@@ -19,9 +19,51 @@ const exitOut = (n: number) => {
   return {dy: t * t * 440, op: 1 - Math.pow(t, 1.6)};
 };
 
+// ---------- 系列栏目头（chapter 0 的句子驱动）----------
+// narration.txt 开头（第一个 # CHAPTER 之前）的句子 = chapter 0 = 栏目头。
+export const HOOK_SENTS = SENTENCES.filter((s) => s.chapter === 0);
+export const HOOK_RANGE: [number, number] = HOOK_SENTS.length ? [1, HOOK_SENTS[HOOK_SENTS.length - 1].to] : [0, 0];
+const hasHook = !!VIDEO.series && VIDEO.series.enabled && HOOK_SENTS.length > 0;
+
+/** 系列栏目头：目标进度 → 股东入股 → 开睡。文本在 narration 开头（会被配音）。 */
+export const OpeningHook: React.FC = () => {
+  if (!hasHook || !VIDEO.series) return null;
+  const N = useCurrentFrame() + 1;
+  const [a, b] = HOOK_RANGE;
+  const s = VIDEO.series;
+  const out = N - (b - 10);
+  const op = out < 0 ? 1 : Math.max(0, 1 - out / 10);
+  const g = 0.5 + 0.5 * Math.sin((N / 26) * Math.PI);
+  const t = clamp01((N - (a + 6)) / 18);
+  const goalW = 520;
+  const prog = clamp01(s.shareholders / Math.max(1, s.goal));
+  return (
+    <div style={{position: 'absolute', inset: 0, opacity: op}}>
+      {/* 目标 */}
+      <div style={{position: 'absolute', inset: 0, opacity: fadeIn(N - (a + 2), 12)}}>
+        <CText cx={640} cy={230} size={34} weight={700} color={GREY}>我们的目标</CText>
+        <CText cx={640} cy={320} size={96} weight={700} family={FONT_ORB} color={PURPLE} shadow={`0 6px 0 #3A1E8A, 0 0 ${24 + 16 * g}px rgba(102,45,248,.7)`}>{String(s.goal)}</CText>
+        <CText cx={640} cy={392} size={30} weight={700} color={WHITE}>位股东</CText>
+      </div>
+      {/* 进度条 */}
+      <div style={{position: 'absolute', left: 640 - goalW / 2, top: 440, width: goalW, height: 14, opacity: fadeIn(N - (a + 14), 12)}}>
+        <div style={{position: 'absolute', inset: 0, background: 'rgba(243,243,243,.25)', borderRadius: 7}} />
+        <div style={{position: 'absolute', left: 0, top: 0, height: 14, width: goalW * prog * t, background: PURPLE, borderRadius: 7, boxShadow: '0 0 14px rgba(102,45,248,.8)'}} />
+      </div>
+      {/* 股东 + 开睡 */}
+      <div style={{position: 'absolute', inset: 0, opacity: fadeIn(N - (b - 40), 14)}}>
+        <CText cx={640} cy={530} size={40} weight={900} color={WHITE}>第 {String(s.shareholders)} 位股东，已就位</CText>
+        <CText cx={640} cy={610} size={48} weight={900} color={PURPLE_LIGHT} shadow={'0 0 26px rgba(161,117,241,.7)'}>{s.tip}</CText>
+        <CText cx={640} cy={672} size={26} weight={600} color={GREY}>{s.sleepWord} ↓</CText>
+      </div>
+    </div>
+  );
+};
+
 // ---------- 片头 ----------
 // 配音未生成时（timeline.ts 占位、SENTENCES 为空）用兜底值，让探针 still 能渲染
-export const TITLE_RANGE: [number, number] = [1, (SENTENCES[0]?.from ?? 100) - 9];
+// 有栏目头时，标题接在栏目头之后
+export const TITLE_RANGE: [number, number] = [HOOK_RANGE[1] + 1, (SENTENCES.find((s) => s.chapter === 1)?.from ?? SENTENCES[0]?.from ?? 100) - 9];
 export const Title: React.FC = () => {
   const N = useCurrentFrame() + TITLE_RANGE[0];
   const [a, b] = TITLE_RANGE;

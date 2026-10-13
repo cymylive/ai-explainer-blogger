@@ -465,7 +465,7 @@ async def main(narr):
     t = LEAD / FPS
     audio_parts = []  # (start_sec, np.array)
     sentences = []; chapters = []
-    sid = 0
+    sid = 0; hid = 0  # hid：栏目头（chapter 0）独立编号，不占用 S 序号
     total_chars = 0; total_words = 0; speech_sec = 0.0
     for it in items:
         if it['type'] == 'chapter':
@@ -479,10 +479,13 @@ async def main(narr):
             continue
         tts_text = sep.join(chunks)
         x, starts, dur = await synth_sentence(chunks, sep)
-        sid += 1
+        if it['chapter'] == 0:
+            hid += 1; sid_id = f'H{hid:02d}'
+        else:
+            sid += 1; sid_id = f'S{sid:02d}'
         subs = [(t + starts[i], t + (starts[i + 1] if i + 1 < len(starts) else dur)) for i in range(len(chunks))]
         f0 = int(round(t * FPS)) + 1; f1 = int(round((t + dur) * FPS))
-        sentences.append({'id': f'S{sid:02d}', 'chapter': it['chapter'], 'from': f0, 'to': f1, 'text': tts_text, 'para': bool(it.get('para_end')),
+        sentences.append({'id': sid_id, 'chapter': it['chapter'], 'from': f0, 'to': f1, 'text': tts_text, 'para': bool(it.get('para_end')),
                           'subs': [{'from': int(round(a * FPS)) + 1, 'to': int(round(b * FPS)), 'text': c} for c, (a, b) in zip(chunks, subs)]})
         audio_parts.append((t, x))
         total_chars += len(re.sub(r'[，。、！？：；“”（）,.!?:;()\-—…\s]', '', tts_text))

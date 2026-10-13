@@ -1,8 +1,9 @@
 import type {ShotDef, BgSpec} from '../common';
 import {TOTAL_FRAMES} from '../common';
-import {Title, TITLE_RANGE, ChapterCard, CHAPTER_CARDS, Hud, HUD_RANGE, Rail, RAILS, Ending, ENDING_RANGE, EndingTop, ENDING_TOP_RANGE, EndCredit, END_CREDIT_RANGE} from './Overlay';
+import {Title, TITLE_RANGE, OpeningHook, HOOK_RANGE, ChapterCard, CHAPTER_CARDS, Hud, HUD_RANGE, Rail, RAILS, Ending, ENDING_RANGE, EndingTop, ENDING_TOP_RANGE, EndCredit, END_CREDIT_RANGE} from './Overlay';
 // 覆盖层（由主会话维护，构建组不要画这些）：片头 / 章节卡 / 顶部 HUD 胶囊 / 流程轨 / 片尾压黑。层序最低（Main 里排最前）。
 export const SHOTS_OVERLAY: ShotDef[] = [
+  ...(HOOK_RANGE[1] > HOOK_RANGE[0] ? [{id: 'OV-OpeningHook', from: HOOK_RANGE[0], to: HOOK_RANGE[1], Comp: OpeningHook}] : []),
   {id: 'OV-Title', from: TITLE_RANGE[0], to: TITLE_RANGE[1], Comp: Title},
   ...CHAPTER_CARDS.map((c) => ({id: `OV-Chapter${c.n}`, from: c.from, to: c.to, Comp: (() => ChapterCard({card: c})) as unknown as React.FC})),
   ...(HUD_RANGE[1] > HUD_RANGE[0] ? [{id: 'OV-Hud', from: HUD_RANGE[0], to: HUD_RANGE[1], Comp: Hud}] : []),

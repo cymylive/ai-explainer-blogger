@@ -17,7 +17,13 @@ description: 给一个主题，产出一条黑底 MG 风格（幕底可选星点
 - 想回在线 edge：设 `A2E_ZH_ENGINE=edge`（edge-tts 2026 端点常 403，故不作默认）。
 - 英文默认仍是 kokoro `am_liam`。
 
-### 2. BGM：统一音量混音
+### 2. 系列栏目头（所有视频默认开）
+- **每条视频开头自动带"栏目头"**（目标进度 → 股东入股 → 开睡），由 `config.ts` 的 `series` 字段控制：`{enabled, goal, shareholders, sleepWord, tip}`。设 `null` 关闭。
+- 栏目头文本写在 `script/narration.txt` **开头**（第一个 `# CHAPTER` 之前，即 chapter 0 的句子），会被配音；画面由 overlay 的 `OpeningHook` 组件渲染，标题卡自动后移。
+- 逐集更新 `shareholders`（股东数）即可，画面进度条/数字自动变。
+- 方法论见 `reference/opening-series-hook.md`。
+
+### 3. BGM：统一音量混音
 - 成片可选混入 BGM：`python -X utf8 scripts/mix_bgm.py <视频>`，BGM 从 `assets/bgm_*.mp3`（当前 `bgm_human_legacy.mp3`）随机选。
 - **音量原则：全程统一**——BGM 固定比配音低 `BGM_DB` dB（默认 **-18**，不做忽高忽低的 ducking）。**绝不用单遍 loudnorm**（动态=忽高忽低）；要配音响度统一用双遍 `VOICE_LUFS=-16`（默认 off）。
 - 片型预设 `PRESET=normal(-18)/sleep(-24)/fast(-14)`。
