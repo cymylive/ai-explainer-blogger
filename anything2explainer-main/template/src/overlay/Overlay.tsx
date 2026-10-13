@@ -39,22 +39,14 @@ export const OpeningHook: React.FC = () => {
   const prog = clamp01(s.shareholders / Math.max(1, s.goal));
   return (
     <div style={{position: 'absolute', inset: 0, opacity: op}}>
-      {/* 目标 */}
-      <div style={{position: 'absolute', inset: 0, opacity: fadeIn(N - (a + 2), 12)}}>
-        <CText cx={640} cy={230} size={34} weight={700} color={GREY}>我们的目标</CText>
-        <CText cx={640} cy={320} size={96} weight={700} family={FONT_ORB} color={PURPLE} shadow={`0 6px 0 #3A1E8A, 0 0 ${24 + 16 * g}px rgba(102,45,248,.7)`}>{String(s.goal)}</CText>
-        <CText cx={640} cy={392} size={30} weight={700} color={WHITE}>位股东</CText>
+      {/* 打招呼 + 今日主题 + 入股邀请 */}
+      <div style={{position: 'absolute', inset: 0, opacity: fadeIn(N - (a + 2), 14)}}>
+        <CText cx={640} cy={250} size={30} weight={500} color={GREY}>{s.tip}</CText>
+        <CText cx={640} cy={338} size={56} weight={900} color={WHITE}>今天聊聊 <span style={{color: PURPLE_LIGHT, textShadow: '0 0 26px rgba(161,117,241,.7)'}}>「{s.topic}」</span></CText>
       </div>
-      {/* 进度条 */}
-      <div style={{position: 'absolute', left: 640 - goalW / 2, top: 440, width: goalW, height: 14, opacity: fadeIn(N - (a + 14), 12)}}>
-        <div style={{position: 'absolute', inset: 0, background: 'rgba(243,243,243,.25)', borderRadius: 7}} />
-        <div style={{position: 'absolute', left: 0, top: 0, height: 14, width: goalW * prog * t, background: PURPLE, borderRadius: 7, boxShadow: '0 0 14px rgba(102,45,248,.8)'}} />
-      </div>
-      {/* 股东 + 开睡 */}
-      <div style={{position: 'absolute', inset: 0, opacity: fadeIn(N - (b - 40), 14)}}>
-        <CText cx={640} cy={530} size={40} weight={900} color={WHITE}>第 {String(s.shareholders)} 位股东，已就位</CText>
-        <CText cx={640} cy={610} size={48} weight={900} color={PURPLE_LIGHT} shadow={'0 0 26px rgba(161,117,241,.7)'}>{s.tip}</CText>
-        <CText cx={640} cy={672} size={26} weight={600} color={GREY}>{s.sleepWord} ↓</CText>
+      <div style={{position: 'absolute', inset: 0, opacity: fadeIn(N - (b - 60), 14)}}>
+        <CText cx={640} cy={446} size={30} weight={600} color={GREY}>对内容感兴趣的<span style={{color: PURPLE_LIGHT}}>朋友，可以入股</span></CText>
+        <CText cx={640} cy={540} size={38} weight={700} color={PURPLE_LIGHT} shadow={'0 0 22px rgba(161,117,241,.6)'}>{s.sleepWord} ↓</CText>
       </div>
     </div>
   );
