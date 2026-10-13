@@ -31,7 +31,7 @@ export const VIDEO = {
   /** 【系列栏目头】所有视频开头的固定栏目头。设 null 关闭。
    *  tip=问候语，topic=本期主题（画面大字），shareholders=当前股东数（逐集改），goal=目标，sleepWord=转场词，enabled=总开关。
    *  栏目头文本要同时写进 script/narration.txt 开头（见模板），才会被配音。 */
-  series: {enabled: true, goal: 1000, shareholders: 0, topic: '本期主题', sleepWord: '咱们开睡', tip: '各位股东们好'} as
+  series: {enabled: true, goal: 1000, shareholders: 0, topic: '本期主题', sleepWord: '咱们开睡', tip: '各位股东们好 · 我是宇宙 mod'} as
     | {enabled: boolean; goal: number; shareholders: number; topic: string; sleepWord: string; tip: string}
     | null,
   /** 章节英文副标（顺序对应 narration 的 CHAPTER 1..n；章节卡从第 2 章起显示；英文片可留空 '' 不渲染）。
