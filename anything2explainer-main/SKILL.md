@@ -141,6 +141,7 @@ python -X utf8 scripts/pipeline.py cover <项目>
 | `reference/style-guide.md` | 画布安全区、调色板、字体、图元目录、版式规律 |
 | `reference/motion-vocabulary.md` | 入场/强调/光效/离场/运镜（含预算）/节拍/衔接的公式与帧数，闪烁白名单规则 |
 | `reference/composition-and-light.md` | **主体尺寸三档、光跟主角、高光时刻编排、纵深与承接、QC 量化判据**（两片对比后补的审美驱动规则） |
+| `reference/opening-series-hook.md` | **成系列视频的"栏目头"方法论**：目标进度→股东入股→开睡的三段式、五条设计原则、避坑、实现方式。做合集/系列时读 |
 | `reference/narration-guidance.md` | **口播文案写作原则**（通用、高层：处境开场 / 一条主线 / 先因后果 / 可感尺度 / 承重比喻 / 语气 / 节奏 / 术语后置 / 结尾回扣 / 密度 / 说画面说不了的 / 精确 / 章界承上启下）+ 起飞前检查表。结构由主线决定，不套题材模板 |
 | `reference/narration-storyboard.md` | 解说词格式与预算、配音参数、字幕切块、分镜令牌格式、按画面关系类型选的镜头设计模式 |
 | `reference/research-brief.md` | 研究员 prompt 与事实规则 |
